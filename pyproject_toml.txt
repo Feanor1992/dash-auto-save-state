@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Automatically save and restore Dash component states to prevent data loss"
 readme = "README.md"
 authors = [
-    {name = "Your Name", email = "your.email@example.com"}
+    {name = "Artem Liubarski", email = "feanor1992@gmail.com"}
 ]
 license = {text = "MIT"}
 classifiers = [
@@ -38,10 +38,10 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/dash-auto-save-state"
-Repository = "https://github.com/yourusername/dash-auto-save-state"
-Issues = "https://github.com/yourusername/dash-auto-save-state/issues"
-Documentation = "https://github.com/yourusername/dash-auto-save-state/blob/main/README.md"
+Homepage = "https://github.com/Feanor1992/dash-auto-save-state"
+Repository = "https://github.com/Feanor1992/dash-auto-save-state"
+Issues = "https://github.com/Feanor1992/dash-auto-save-state/issues"
+Documentation = "https://github.com/Feanor1992/dash-auto-save-state/blob/main/README.md"
 
 [project.optional-dependencies]
 dev = [
