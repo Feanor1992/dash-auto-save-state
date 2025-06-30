@@ -7,11 +7,6 @@ from setuptools import setup, find_packages
 with open('README.md', 'r', encoding='utf-8') as fh:
     long_description = fh.read()
 
-# Read requirements
-with open('requirements.txt', 'r', encoding='utf-8') as f:
-    requirements = [line.strip() for line in f if line.strip() and not line.startswith("#")]
-
-
 setup(
     name='dash-auto-save-state',
     version='0.1.0',
@@ -22,7 +17,7 @@ setup(
     long_description_content_type='text/markdown',
     url='https://github.com/Feanor1992/dash-auto-save-state',
     packages=find_packages(),
-    install_requires=requirements,
+    install_requires=['dash==2.10.0', 'plotly>=5.0.0'],
     keywords=[
         'dash', 'plotly', 'web-app', 'auto-save', 'state-management',
         'localStorage', 'data-persistence', 'dash-hook', 'plugin'
