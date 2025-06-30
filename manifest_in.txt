@@ -1,0 +1,12 @@
+include README.md
+include LICENSE
+include requirements.txt
+include MANIFEST.in
+recursive-include dash_auto_save_state *.py
+recursive-include examples *.py
+exclude tests/
+exclude .git*
+exclude .pytest_cache/
+exclude __pycache__/
+exclude *.pyc
+exclude .DS_Store
