@@ -1,0 +1,102 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dash-auto-save-state"
+version = "0.1.0"
+description = "Automatically save and restore Dash component states to prevent data loss"
+readme = "README.md"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Framework :: Dash",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+    "Topic :: Scientific/Engineering :: Visualization",
+]
+keywords = [
+    "dash", "plotly", "web-app", "auto-save", "state-management", 
+    "localStorage", "data-persistence", "dash-hook", "plugin"
+]
+requires-python = ">=3.7"
+dependencies = [
+    "dash>=2.10.0",
+    "plotly>=5.0.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/dash-auto-save-state"
+Repository = "https://github.com/yourusername/dash-auto-save-state"
+Issues = "https://github.com/yourusername/dash-auto-save-state/issues"
+Documentation = "https://github.com/yourusername/dash-auto-save-state/blob/main/README.md"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov>=2.0",
+    "black>=21.0",
+    "flake8>=3.9",
+    "isort>=5.0",
+    "mypy>=0.900",
+]
+test = [
+    "pytest>=6.0",
+    "pytest-cov>=2.0",
+    "selenium>=4.0",
+    "dash[testing]>=2.0",
+]
+examples = [
+    "dash-bootstrap-components>=1.0.0",
+    "pandas>=1.0.0",
+]
+
+[project.scripts]
+dash-auto-save-demo = "dash_auto_save_state.examples.demo:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["dash_auto_save_state*"]
+
+[tool.black]
+line-length = 88
+target-version = ['py37']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88
+known_first_party = ["dash_auto_save_state"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
